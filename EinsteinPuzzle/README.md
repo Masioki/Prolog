@@ -15,3 +15,5 @@
 13. Horse owner lives next to yellow house
 14. Menthol smoker drinks beer
 15. Green house resident drinks coffee
+
+Who owns fish ?
