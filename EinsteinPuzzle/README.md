@@ -1,4 +1,4 @@
-#Einstein Puzzle
+# Einstein Puzzle
 
 1. Norwegian lives in first house
 2. Englishman lives in red house
