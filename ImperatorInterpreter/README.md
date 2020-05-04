@@ -1,26 +1,42 @@
 #  Imperative language interpreter in Prolog  
 
-Variables are uppercase  
-  VAR := 1;  
+**Variables are uppercase.**  
+ 
 
-Equal      =  
-Not equal /=  
-And       and  
-Or        or  
-Greater   >  
-Less      <  
-GE        >=  
-LE        =<  
-Modulo    mod  
+    VAR := 1; 
+
+Equal    &nbsp;   =  
+Not equal  &nbsp;/=  
+And      &nbsp;  and  
+Or      &nbsp;   or  
+Greater  &nbsp;  >  
+Less    &nbsp;   <  
+GE     &nbsp;    >=  
+LE      &nbsp;   =<  
+Modulo   &nbsp;  mod  
   
 Loop:  
-    while condition do  
-    ...  
-    od;  
+ 
+
+    read IN;   
+    while IN > 0 do  
+              IN := IN - 1;
+    od;
+    write IN;
       
 If statement:  
-    if condition then  
-    ...  
-    else  
-    ...  
+  
+
+    read IN;  
+    if IN > 0  and IN < 5 then  
+            IN := IN + 2;
+        else  
+            IN := IN - 2;
     fi;  
+    write IN;
+
+
+Execution:  
+  
+
+     exec(FileName).  
