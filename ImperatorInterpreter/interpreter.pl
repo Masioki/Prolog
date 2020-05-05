@@ -110,7 +110,7 @@ interpreter([while(C, P) | PGM], ASSOC) :- !,
 interpreter(PROGRAM) :-
      interpreter(PROGRAM, []).
 
-wykonaj(Name) :-
+exec(Name) :-
      open(Name,read,X),
      scanner(X,Y),
      close(X),

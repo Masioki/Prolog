@@ -1,7 +1,4 @@
-% Za³o¿y³em, ¿e wszystko jest przedzielone spacjami oprócz ';', tak jak
-% w przyk³adzie.
-% Wczytujemy ca³y plik podzielony na linie przez '\n'.
-% Potem dzielimy linie przez '\s' i próbujemy dopasowaæ.
+
 
 
 sep(X) :-
