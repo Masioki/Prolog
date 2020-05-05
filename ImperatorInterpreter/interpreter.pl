@@ -1,17 +1,19 @@
+:- [tokenizer].
+:- [parser].
 
-
+% podstaw(+Stare, +ID, +Wartosc, -Nowe)
 podstaw([], ID, N, [ID = N]).
 podstaw([ID=_ | AS], ID, N, [ID=N | AS]) :- !.
 podstaw([ID1=W1 | AS1], ID, N, [ID1=W1 | AS2]) :-
      podstaw(AS1, ID, N, AS2).
 
-
+% pobierz(+Asocjacje, +ID, -Wartosc)
 pobierz([ID=N | _], ID, N) :- !.
 pobierz([_ | AS], ID, N) :-
      pobierz(AS, ID, N).
 
 
-
+% wartosc(+Wyrazenie, +Asocjacje, -Wartosc)
 %wartosc(int(N), _, N).
 wartosc(int(N),_,N1) :-
      number_string(N1,N).
@@ -42,7 +44,7 @@ wartosc(W1 mod W2, AS, N) :-
      N is N1 mod N2.
 
 
-
+% prawda(+Warunek, +Asocjacje)
 prawda(W1 =:= W2, AS) :-
      wartosc(W1, AS, N1),
      wartosc(W2, AS, N2),
@@ -104,11 +106,11 @@ interpreter([while(C, P) | PGM], ASSOC) :- !,
      append(P, [while(C, P)], DALEJ),
      interpreter([if(C, DALEJ) | PGM], ASSOC).
 
-
+% interpreter(+Program)
 interpreter(PROGRAM) :-
      interpreter(PROGRAM, []).
 
-exec(Name) :-
+wykonaj(Name) :-
      open(Name,read,X),
      scanner(X,Y),
      close(X),
