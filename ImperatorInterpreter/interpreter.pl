@@ -1,6 +1,8 @@
 :- [tokenizer].
 :- [parser].
 
+% author https://cs.pwr.edu.pl/kobylanski/
+
 % podstaw(+Stare, +ID, +Wartosc, -Nowe)
 podstaw([], ID, N, [ID = N]).
 podstaw([ID=_ | AS], ID, N, [ID=N | AS]) :- !.
